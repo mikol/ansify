@@ -1,6 +1,6 @@
 {
   "name": "ansify-text",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A chainable API for styling ANSI terminal strings",
   "files": [
     "ansify.d.ts",
