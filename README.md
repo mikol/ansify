@@ -2,18 +2,34 @@
 A chainable API (like [Chalk][1]) for styling ANSI terminal strings
 
 ## Installation
-`npm install ansify-styles`
+`npm install ansify-text`
 
 ## Usage
 
 ```javascript
 import {
   default as ansify, ansify0, ansify16, ansify256, ansifyErr, ansifyRgb
-} from 'ansify-styles'
+} from 'ansify-text'
 
 // The root of a chain of ANSI escape code formatters with support for colors
 // automatically detected from stdout.
 ansify
+
+// The root of a chain of 0-color ANSI escape code formatters.
+ansify0
+
+// The root of a chain of 16-color ANSI escape code formatters.
+ansify16
+
+// The root of a chain of 256-color ANSI escape code formatters.
+ansify256
+
+// The root of a chain of ANSI escape code formatters with support for colors
+// automatically detected from stderr.
+ansifyErr
+
+// The root of a chain of true-color ANSI escape code formatters.
+ansifyRgb
 
 // Modifiers
 
@@ -114,31 +130,15 @@ console.log(ansify.bgAnsi256(215)('Hello!'))
 
 // True Color (Hex)
 
-console.log(ansify.hex('#FC0')('Hello!'))
-console.log(ansify.hexBg('#FC0')('Hello!'))
-console.log(ansify.bgHex('#FC0')('Hello!'))
+console.log(ansify.hex('#F90')('Hello!'))
+console.log(ansify.hexBg('#F90')('Hello!'))
+console.log(ansify.bgHex('#F90')('Hello!'))
 
 // True Color (RGB)
 
 console.log(ansify.rgb(255, 153, 0)('Hello!'))
 console.log(ansify.rgbBg(255, 153, 0)('Hello!'))
 console.log(ansify.bgRgb(255, 153, 0)('Hello!'))
-
-// The root of a chain of 0-color ANSI escape code formatters.
-ansify0
-
-// The root of a chain of 16-color ANSI escape code formatters.
-ansify16
-
-// The root of a chain of 256-color ANSI escape code formatters.
-ansify256
-
-// The root of a chain of ANSI escape code formatters with support for colors
-// automatically detected from stderr.
-ansifyErr
-
-// The root of a chain of true-color ANSI escape code formatters.
-ansifyRgb
 ```
 
 [1]: https://github.com/chalk/chalk
