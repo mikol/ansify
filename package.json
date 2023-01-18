@@ -1,0 +1,52 @@
+{
+  "name": "ansify-styles",
+  "version": "1.0.0",
+  "description": "A chainable API for styling ANSI terminal strings",
+  "main": "ansify.mjs",
+  "type": "module",
+  "types": "./source/ansify.d.ts",
+  "scripts": {
+    "test": "node ansify.test.mjs",
+    "preversion": "run test",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikol/ansify.git"
+  },
+  "keywords": [
+    "256",
+    "ansi",
+    "cli",
+    "color",
+    "colors",
+    "colour",
+    "colours",
+    "comand-line",
+    "console",
+    "formatting",
+    "log",
+    "logging",
+    "rgb",
+    "shell",
+    "string",
+    "style",
+    "styles",
+    "term",
+    "terminal",
+    "text",
+    "tty",
+    "xterm"
+  ],
+  "author": {
+    "name": "Mikol Graves",
+    "email": "mikol@thinbox.org",
+    "url": "https://mikol.github.io/"
+  },
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/mikol/ansify/issues"
+  },
+  "homepage": "https://github.com/mikol/ansify#readme"
+}
