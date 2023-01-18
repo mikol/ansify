@@ -2,9 +2,13 @@
   "name": "ansify-text",
   "version": "1.0.0",
   "description": "A chainable API for styling ANSI terminal strings",
+  "files": [
+    "ansify.d.ts",
+    "ansify.mjs"
+  ],
   "main": "ansify.mjs",
   "type": "module",
-  "types": "./source/ansify.d.ts",
+  "types": "ansify.d.ts",
   "scripts": {
     "test": "node ansify.test.mjs",
     "preversion": "run test",
